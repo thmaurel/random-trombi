@@ -1,0 +1,7 @@
+<h1><%= @profile.name %></h1>
+<h2><%= @profile.job %></h2>
+<% if @profile.photo.attached? %>
+  <%= cl_image_tag @profile.photo.key, id: "show-img" %>
+<% else %>
+  <%= image_tag "home.jpg", id: "show-img" %>
+<% end %>
