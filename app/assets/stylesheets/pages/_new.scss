@@ -1,0 +1,12 @@
+.new-container {
+  padding-top: 100px;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}

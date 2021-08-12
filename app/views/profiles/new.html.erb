@@ -1,7 +1,9 @@
-<h1>Add a new <span id="banner-title">profile!</span></h1>
-<%= simple_form_for @profile do |f| %>
-  <%= f.input :name %>
-  <%= f.input :job %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="new-container text-center">
+  <h1>Add a new <span id="banner-title">profile!</span></h1>
+  <%= simple_form_for @profile do |f| %>
+    <%= f.input :name, label: false, placeholder: "Name?", input_html: {class: "mb-4"} %>
+    <%= f.input :job, label: false, placeholder: "Activity?", input_html: {class: "mb-4"} %>
+    <%= f.input :photo, as: :file, label: false, input_html: {class: "mb-4"} %>
+    <%= f.submit "Create", class: "btn-trombino" %>
+  <% end %>
+</div>
