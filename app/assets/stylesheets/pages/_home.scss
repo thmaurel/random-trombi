@@ -1,1 +1,44 @@
 // Specific CSS for your home-page
+.banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+  margin-top: 80px;
+}
+
+#banner-title {
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+#home-banner {
+  height: 500px;
+  //width: 500px;
+  //object-fit: cover;
+  border-radius: 50%;
+  //box-shadow: 5px 5px 10px black;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 580px);
+}
+
+#btn-home {
+  font-size: 36px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  &:hover {
+    color:black;
+    background-color:white;
+    border: 1px solid black;
+  }
+}

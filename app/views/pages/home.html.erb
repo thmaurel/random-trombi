@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <%= image_tag "home.jpg", id: "home-banner" %>
+  <h1>Welcome to <span id="banner-title">TrombinoGO!</span></h1>
+</div>
+<div class="content">
+  <%= link_to "Start the GAME", "#", id: "btn-home" %>
+</div>
