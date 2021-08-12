@@ -66,3 +66,16 @@
     border: 1px solid black;
   }
 }
+
+.btn-trombino-reverse {
+  color:black;
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 15px;
+  opacity: 0.5;
+  &:hover {
+    color:black;
+    opacity: 1;
+  }
+}

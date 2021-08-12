@@ -1,0 +1,30 @@
+<div class="random-container">
+  <div class="random-pic">
+    <% if @profile.photo.attached? %>
+      <%= cl_image_tag @profile.photo.key, id: "show-img" %>
+    <% else %>
+      <%= image_tag "home.jpg", id: "show-img" %>
+    <% end %>
+    <%= link_to "Next", random_path, class: "btn-trombino-reverse mt-3" %>
+  </div>
+  <div class="pl-5">
+    <h2 class="mb-4">Qui suis-je ?</h2>
+    <%= form_tag submit_path, method: :post do %>
+      <%= text_field_tag :name,
+        params[:name],
+        class: "form-control mb-4",
+        placeholder: "Find the name"
+      %>
+      <%= text_field_tag :activity,
+        params[:activity],
+        class: "form-control mb-4",
+        placeholder: "Find the activity"
+      %>
+      <%= hidden_field_tag :profile, @profile.id %>
+      <div class="d-flex">
+        <%= submit_tag "Guess", class: "btn-trombino" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
