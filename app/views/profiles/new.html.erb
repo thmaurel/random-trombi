@@ -2,5 +2,6 @@
 <%= simple_form_for @profile do |f| %>
   <%= f.input :name %>
   <%= f.input :job %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
