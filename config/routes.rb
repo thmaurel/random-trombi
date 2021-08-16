@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :profiles, only: [:new, :create, :show]
+  resources :profiles, only: [:new, :create, :show, :index]
   resources :games, only: [:create, :show] do
     member do
       get :random

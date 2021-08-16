@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="cards">
+    <% @profiles.each do |profile| %>
+      <div class="index-card">
+        <% if profile.photo.attached? %>
+          <%= cl_image_tag profile.photo.key, class: "index-img" %>
+        <% else %>
+          <%= image_tag "home.jpg", id: "show-img" %>
+        <% end %>
+        <div>
+          <h2><%= profile.name %></h2>
+          <p><%= profile.job %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
