@@ -1,0 +1,5 @@
+meta_product_name: "TrombinoGO"
+meta_title: "TrombinoGO - Find who they are"
+meta_description: "An easy tool to train on picture to remember people!"
+meta_image: "home.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
