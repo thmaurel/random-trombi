@@ -11,6 +11,7 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
+    @profile.active = true
     if @profile.save
       flash[:notice] = "Your profile has been saved!"
       redirect_to new_profile_path
