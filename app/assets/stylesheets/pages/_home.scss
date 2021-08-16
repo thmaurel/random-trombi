@@ -30,6 +30,20 @@
   height: calc(100vh - 580px);
 }
 
+#btn-home-reverse {
+  font-size: 36px;
+  color:black;
+  background-color:white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 9px 25px;
+  opacity: 0.5;
+  &:hover {
+    color:black;
+    opacity: 1;
+  }
+}
+
 #btn-home {
   font-size: 36px;
   color: white;
