@@ -34,7 +34,8 @@ class ProfilesController < ApplicationController
   end
 
   def destroy
-
+    @profile.destroy
+    redirect_to profiles_path
   end
 
   def random
