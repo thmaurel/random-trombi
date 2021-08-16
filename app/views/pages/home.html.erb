@@ -1,8 +1,10 @@
 <div class="banner">
   <%= image_tag "home.jpg", id: "home-banner" %>
-  <h1>Welcome to <span id="banner-title">TrombinoGO!</span></h1>
+  <div>
+    <h1 class="mb-5">Welcome to TrombinoGO!</h1>
+    <%= link_to "Start the GAME", random_path, id: "btn-home" %>
+  </div>
 </div>
 <div class="content">
-  <%= link_to "Start the GAME", random_path, id: "btn-home" %>
   <%#= link_to "Play randomly", random_path, id: "btn-home-reverse", class: "ml-5" %>
 </div>
