@@ -13,7 +13,6 @@ const submit = () => {
       .then((data) => {
         if (data.status === "won") {
           answerContainer.innerHTML = "<p class=\"correct-answer\">Gagné!</p>"
-          document.location.href= "/random";
           setTimeout(() => {document.location.href= "/random";}, 2000)
         } else {
           console.log("c'est perdu!")
