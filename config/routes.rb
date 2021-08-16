@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :profiles
+  resources :profiles do
+    get :correct
+  end
   resources :games, only: [:create, :show] do
     member do
       get :random

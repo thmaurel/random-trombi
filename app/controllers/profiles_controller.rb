@@ -9,6 +9,17 @@ class ProfilesController < ApplicationController
     @profile = Profile.new
   end
 
+  def correct
+    @profile = Profile.find(params[:profile_id])
+    name = params[:name]
+    activity = params[:activity]
+    if @profile.name.downcase == name.downcase && @profile.job.downcase == activity.downcase
+      render json: {status: "won"}.to_json
+    else
+      render json: {status: "lost", name: @profile.name, activity: @profile.job}.to_json
+    end
+  end
+
   def create
     @profile = Profile.new(profile_params)
     @profile.active = true
