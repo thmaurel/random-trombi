@@ -62,11 +62,11 @@ class ProfilesController < ApplicationController
     if valid
       flash[:notice] = "GG WP bro!"
     else
-      flash[:alert] = "Perdu!"
+      flash[:alert] = "Fais un effort pls"
       #flash[:alert] = "Perdu, c'était #{@profile.name} - #{@profile.job}"
       #sleep 4
     end
-      redirect_to random_path
+    # redirect_to random_path
   end
 
   private

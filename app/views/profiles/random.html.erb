@@ -27,8 +27,11 @@
           <p class="answer random-form-activity"></p>
         </div>
         <%= hidden_field_tag :profile, @profile.id %>
-        <div class="d-flex">
-          <%= submit_tag "Guess", class: "btn-trombino", id: "submit-btn" %>
+        <div class="d-flex align-items-center">
+          <div class="random-btns">
+            <%= submit_tag "Guess", class: "btn-trombino", id: "submit-btn" %>
+            <%= link_to "Next", random_path, class: "btn-trombino-reverse btn-random-next d-none" %>
+          </div>
           <div class="random-form-answer"></div>
         </div>
       <% end %>
@@ -37,3 +40,10 @@
 <% else %>
   <h2>Il n'y a pas de profils actuellement, veuillez en ajouter!</h2>
 <% end %>
+
+<div class="alert alert-warning alert-dismissible fade show m-1 d-none random-alert" role="alert">
+  Fais un effort pls
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

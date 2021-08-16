@@ -16,16 +16,19 @@ const submit = () => {
           setTimeout(() => {document.location.href= "/random";}, 2000)
         } else {
           console.log("c'est perdu!")
+          document.querySelector('.random-alert').classList.remove('d-none')
           const nameContainer = document.querySelector('.random-form-name')
           const activityContainer = document.querySelector('.random-form-activity')
           nameContainer.innerText = data.name
           activityContainer.innerText = data.activity
-          answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 4s!</p>"
-          setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 3s!</p>"}, 1000)
-          setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 2s!</p>"}, 2000)
-          setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 1s!</p>"}, 3000)
-          setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 0s!</p>"}, 4000)
-          setTimeout(() => {document.location.href= "/random";}, 4000)
+          document.querySelector('.btn-random-next').classList.remove('d-none')
+          document.getElementById('submit-btn').classList.add('d-none')
+          answerContainer.innerHTML = "<p class=\"answer no-margin\">Perdu!</p>"
+          //setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 3s!</p>"}, 1000)
+          //setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 2s!</p>"}, 2000)
+          //setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 1s!</p>"}, 3000)
+          //setTimeout(() => {answerContainer.innerHTML = "<p class=\"answer\">Perdu! Suivant dans 0s!</p>"}, 4000)
+          //setTimeout(() => {document.location.href= "/random";}, 4000)
         }
       });
   })
