@@ -1,0 +1,8 @@
+<div class="new-container text-center">
+  <h1>Edit <span id="banner-title"><%= @profile.name %>!</span></h1>
+  <%= simple_form_for @profile do |f| %>
+    <%= f.input :name, label: false, placeholder: "Name?", input_html: {class: "mb-4"} %>
+    <%= f.input :job, label: false, placeholder: "Activity?", input_html: {class: "mb-4"} %>
+    <%= f.submit "Create", class: "btn-trombino" %>
+  <% end %>
+</div>

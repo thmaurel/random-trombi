@@ -10,6 +10,7 @@
         <div>
           <h2><%= profile.name %></h2>
           <p><%= profile.job %></p>
+          <%= link_to "Edit", edit_profile_path(profile), class: "btn-trombino-reverse " %>
         </div>
       </div>
     <% end %>

@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+
   def index
     @profiles = Profile.all
   end
@@ -18,7 +20,21 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profile = Profile.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @profile.update(profile_params)
+      redirect_to profiles_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+
   end
 
   def random
@@ -40,6 +56,10 @@ class ProfilesController < ApplicationController
   end
 
   private
+
+  def set_profile
+    @profile = Profile.find(params[:id])
+  end
 
   def profile_params
     params.require(:profile).permit(:name, :job, :photo)
