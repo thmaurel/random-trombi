@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   def index
-    @profiles = Profile.all
+    @profiles = Profile.where(active: true)
   end
 
   def new
@@ -34,12 +34,12 @@ class ProfilesController < ApplicationController
   end
 
   def destroy
-    @profile.destroy
+    @profile.update(active: false)
     redirect_to profiles_path
   end
 
   def random
-    @profile = Profile.all.sample
+    @profile = Profile.where(active:true).sample
   end
 
   def submit
